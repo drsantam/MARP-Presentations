@@ -260,6 +260,49 @@ section.two-column > h2 {
   margin-top: 0;
 }
 
+/* ---------- Split-box layout ----------
+ * Two columns: one with a shaded callout box, the other with an image.
+ * First H1 spans full width as the title.
+ * Usage: <!-- _class: split-box -->
+ *
+ *   <div class="box"> …content… </div>
+ *   ![w:500](image.png)
+ */
+section.split-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em 1em;
+  align-items: start;
+  align-content: start;
+}
+section.split-box > h1 {
+  grid-column: 1 / -1;
+}
+section.split-box .box {
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-left: 5px solid var(--accent);
+  padding: 1em 1.2em;
+  border-radius: 6px;
+  font-size: 0.85em;
+}
+section.split-box .box ul,
+section.split-box .box ol {
+  margin: 0;
+  padding-left: 1.2em;
+}
+section.split-box img {
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+}
+section.split-box blockquote {
+  grid-column: 2;
+  font-size: 0.55em;
+  margin: 0.5em 0 0;
+  padding: 0.5em 1em;
+}
+
 /* ---------- Image-focused layout ----------
  * Large centered image with a small caption below.
  * Usage: <!-- _class: image-focus -->

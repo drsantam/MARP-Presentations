@@ -50,13 +50,17 @@ footer: 'Data Types and How AI Learns (2026) · CC BY-NC 4.0'
 # Outline
 
 1. *What is Data?*
-1. *Types of Data*
-1. *How AI Learns*
+2. *Types of Data*
+3. *Special Issues with healthcare data*
+4. *Getting data ready for AI*
+5. *How AI Learns from this data*
+
+
+ > ⚠️ Disclaimer: This is a very superficial overview of a vast discipline. (Over-)Simplification is necessary. 
 
 ---
 
 <!-- _class: transition -->
-<!-- _paginate: false -->
 
 
 
@@ -69,7 +73,7 @@ Any thing can be data but in medical context typically information is sourced fr
 ---
 
 <!-- _class: image-focus -->
-<!-- _paginate: false -->
+
 
 # Types of Data
 
@@ -153,3 +157,213 @@ Any thing can be data but in medical context typically information is sourced fr
 
 ---
 
+# Data Preprocessing: Key Terms
+
+1. **Data Cleaning** : Removing incorrect entries (Domain Knowledge needed). Remember no matter the AI GIGO. 
+
+2. **Data Integration**: Merging data from heterogenous sources into a single dataset. 
+
+3. **Data Transformation**: Converting data into representations which are suitable for ML models.
+
+4. **Data Reduction**: Reducing the number of features that the model has to learn. 
+
+
+---
+<!-- _class: image-focus -->
+
+# Data Cleaning
+
+![w:1000](assets/model_collapse.webp)
+
+
+> AI is not immune to GIGO - If you feed it garbage data (specially AI slop) it will degrade. Image Source: Nepotistically Trained Generative-AI Models Collapse Matyas Bohacek, Hany Farid. https://doi.org/10.48550/arXiv.2311.12202
+
+
+---
+<!-- _class: split-box -->
+# Data Transformation
+
+<div class="box">
+
+- **Feature Scaling**: The **range** of numerical values is scaled to a uniform value such the variables with different ranges do not influence model prediction.
+- **Encoding**: Converting categorical variables into numerical representations.
+- **Binning**: Grouping continuous values into discrete intervals. 
+
+</div>
+
+<div>
+
+![w:500](assets/impact_of_scaling.png)
+
+ > In this experiment, proline values where highly variable (larger range) while hue had a small range which resulted in model "learning" differences were due to proline values! Image source : https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html
+
+</div>
+
+---
+<!-- _class: split-box -->
+
+# Data Reduction
+
+<div class="box">
+
+- **Feature Selection**: Selecting a subset of relevant features for model training.
+- **Dimensionality Reduction**: Reducing the number of random variables under consideration.
+
+Feature selection is widely practiced to improve model ***"performance"***. However fundamentally biased as it is dependant on the "Outcome" variable. Dimensionality reduction is better but more complex to interpret & explain
+
+</div>
+
+<div>
+
+![w:500](assets/spurious_correlation.png)
+
+ > Source: https://www.tylervigen.com/spurious/correlation/5920_per-capita-consumption-of-margarine_correlates-with_the-divorce-rate-in-maine     
+
+ > AI says : The lack of artificial spread may have kept the couples from buttering each other up ..
+</div>
+
+
+---
+<!-- _class: compact-table -->
+
+# Preprocessing tasks by Data Modality
+
+|Modality of Data| Preprocessing Steps | Purpose |
+|---|---|---|
+|Tabular Data| Missing value imputation, outlier detection, scaling and encoding | Normaize the data matrix for classification & regression |
+|NLP| Toeknization, Lowercasing, Stop word removal, Stemming / Lemmatization, Vectorization | Convert text strings into numerical representations and remove linguistic noise|
+|Vision| Resizing, Rescaling, Histogram equalization| Makes the input data format uniform, expands dataset to avoid overfitting|
+|Time Series| Differncing, Rolling window calculation | Stabilizing Trends and variations, Sequential dependancies |
+
+---
+
+<!-- _class: image-focus -->
+
+# How Models Work !
+
+![w:1000](assets/zoolander.jpeg)
+
+> Source: https://www.gq.com/story/blue-steel-zoolander-selfie-culture. Fun fact this movie was released in 2001 and was extremely prescient about the selfie culture which would explode in the 2010s.
+
+---
+
+<!-- _class: split-box -->
+
+# How Models Work: For Real !
+
+<div>
+
+![w:1000](assets/Least_Squares.gif)
+
+> Source: By Stephen1729 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=114896374. 
+
+</div>
+
+<div class='box'>
+
+- The most basic example of a "ML" Prediction model is a Linear regression.
+
+- The line tries to find the best **slope** and **"intercept"** which reduces the mean-squared error or difference between predicted and observed values.
+
+- The coefficient is the "slope" while the intercept is the value of Y when X=0. 
+
+- In ML this is called the "bias" term. 😖
+
+</div>
+
+---
+
+<!-- _class: split-box -->
+
+# Can we not fit this better ?
+
+<div>
+
+![w:1000](assets/fits.svg)
+
+> Idea from Statquest Illustrated Guide to Machine Learning V1.0: Josh Stramer Buy it here : https://shorturl.at/dtGEv. 
+
+</div>
+
+<div class='box'>
+
+- Fitting the data means that we reduce the difference between the predicted and actual values.
+
+- Quiz : Which of theset wo lines are "fitting" the data better ?
+
+</div>
+
+
+---
+
+<!-- _class: split-box -->
+
+# What happens when we evaluate it ?
+
+<div>
+
+![w:1000](assets/fits2.svg)
+
+> Idea from Statquest Illustrated Guide to Machine Learning V1.0: Josh Stramer Buy it here : https://shorturl.at/dtGEv. 
+
+</div>
+
+<div class='box'>
+
+- The red dots represent the "training" data. 
+
+- The black dosts represent the "testing" data
+
+- A classic illustration of what happens when you have an "overfitted" model. 
+
+</div>
+
+---
+
+<!-- _class: split-box -->
+
+# Different types of ML Learning
+
+<div class='box'>
+
+- **Learning** in the context of AI is very different from what we mean by learning. 
+
+- AI Learning is a mathematical optimization procedure computed using a statistical procedure.
+
+- Unlike **programming** there is no set recipie or algorthm to follow.
+
+- Each type is meant for specific types of tasks.
+
+</div>
+
+<div class='box'>
+
+- **Supervised Learning** : A model is provided with **labelled** data for predicting an outcome.
+- **Unsupervised Learning** : Model is provided with **unlabelled** data to find patterns or structure in the data.
+- **Reinforcement Learning** : A technique where we provide the model with a **reward** signal and the model optimizes the way to maximize that reward.
+
+</div>
+
+---
+
+# How does AI Predict ?
+
+- The broad approaches are:
+  - Compute **coefficients** for each variable & figure how how these variables interact with each other (a.k.a Regression)
+  - **Partition** the observations based on variable values (a.k.a tree based methods). 
+  - Use **similiar features** to make predictions (a.k.a nearest neighbour).
+  - Compute **non-linear transformation** of variables (a.k.a neural networks).
+
+  > Note that this is not a clear classification. Some methods called "ensemble methods" may use a combination. 
+
+
+
+---
+# How do Neural Networks work ?
+
+
+
+
+
+
+---
