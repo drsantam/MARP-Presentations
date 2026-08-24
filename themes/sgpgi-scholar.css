@@ -97,6 +97,20 @@ section th, section td { border: 1px solid #d6dee6; padding: 0.4em 0.8em; }
 section th { background: var(--primary); color: #fff; }
 section tr:nth-child(even) td { background: var(--bg-soft); }
 
+/* Compact table — use with <!-- _class: compact-table --> */
+section.compact-table table {
+  width: 100%;
+  font-size: 0.7em;
+  margin: 0.5em 0;
+  table-layout: auto;
+}
+section.compact-table th,
+section.compact-table td {
+  padding: 0.3em 0.6em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
 /* ---------- Footer ---------- */
 footer {
   color: var(--muted);
@@ -114,21 +128,23 @@ section::after {
   font-size: 0.6em;
 }
 
-/* ---------- Title (lead) slide ---------- */
-section.lead {
+/* ---------- Title slide ----------
+ * Usage: <!-- _class: titlepage -->
+ */
+section.titlepage {
   background: linear-gradient(135deg, #ffffff 0%, var(--bg-soft) 100%);
   text-align: center;
   /* No horizontal padding so the logo strip can span edge-to-edge */
   padding: 0;
 }
-section.lead h1 {
+section.titlepage h1 {
   border-bottom: none;
   font-size: 2.4em;
   margin: 0.2em 70px 0;
   color: var(--primary);
   text-align: center;
 }
-section.lead h1::after {
+section.titlepage h1::after {
   content: '';
   display: block;
   width: 120px;
@@ -136,14 +152,30 @@ section.lead h1::after {
   background: var(--accent);
   margin: 0.3em auto 0;
 }
-section.lead h2, section.lead h3 {
-  color: var(--muted);
-  font-weight: 500;
+section.titlepage h3 {
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 1em;
   text-align: center;
+  margin: 1.2em 70px 0;
+}
+section.titlepage h4 {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.8em;
+  text-align: center;
+  margin: 0.3em 70px 0;
+}
+section.titlepage h6 {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.7em;
+  text-align: center;
+  margin: 0.2em 70px 0;
 }
 
 /* ---------- Logo strip spanning the top half, edge to edge ---------- */
-.title-logos {
+.topleft {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +189,7 @@ section.lead h2, section.lead h3 {
   background: #ffffff;
   border-bottom: 1px solid var(--rule);
 }
-.title-logos img {
+.topleft img {
   /* Fill the strip height while keeping aspect ratio */
   height: 80%;
   width: auto;
@@ -165,19 +197,6 @@ section.lead h2, section.lead h3 {
   object-fit: contain;
 }
 
-/* ---------- Author block on title slide ---------- */
-.author {
-  color: var(--muted);
-  font-size: 0.7em;
-  margin: 1em 70px 0;
-  line-height: 1.5;
-  text-align: center;
-}
-.author .name {
-  color: var(--primary-dark);
-  font-weight: 700;
-  font-size: 1.1em;
-}
 
 /* ============================================================
  * Reusable slide layouts
@@ -248,34 +267,55 @@ section.two-column > h2 {
 section.image-focus {
   text-align: center;
   justify-content: center !important;
-  padding: 40px 70px;
+  padding: 20px 30px;
+}
+section.image-focus h1 {
+  font-size: 1.5em;
+  border-bottom: none;
+  margin-bottom: 0.1em;
 }
 section.image-focus img {
-  max-height: 420px;
+  max-height: 500px;
   max-width: 90%;
   object-fit: contain;
   flex-shrink: 1;
   min-height: 0;
 }
-section.image-focus h1 {
-  font-size: 1.3em;
-  border-bottom: none;
-  margin-bottom: 0.2em;
-}
 section.image-focus p {
   color: var(--muted);
   font-size: 0.6em;
-  margin: 0.4em 0 0;
+  margin: 0.5em 0 0;
 }
 section.image-focus .attribution {
   font-size: 0.4em;
-  margin-top: 0.6em;
+  margin-top: 0.1em;
   flex-shrink: 0;
   color: var(--muted);
   font-style: italic;
   text-align: center;
   max-width: 100%;
   word-wrap: break-word;
+}
+section.image-focus blockquote {
+  grid-column: 2;
+  grid-row: 2;
+  border: none;
+  background: none;
+  margin: 0.3em auto 0;
+  padding: 0;
+  font-size: 0.4em;
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  max-width: 100%;
+  flex-shrink: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+section.image-focus blockquote p {
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
 }
 
 /* ---------- Quote / highlight layout ----------
