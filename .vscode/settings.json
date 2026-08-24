@@ -1,0 +1,27 @@
+{
+  "markdown.marp.html": true,
+  "markdown.marp.themes": [
+    "./themes/sgpgi-scholar.css",
+    "./themes/arendt.css",
+    "./themes/descartes.css",
+    "./themes/einstein.css",
+    "./themes/freud.css",
+    "./themes/godel.css",
+    "./themes/hegel.css",
+    "./themes/heidegger.css",
+    "./themes/husserl.css",
+    "./themes/jobs.css",
+    "./themes/kant.css",
+    "./themes/king.css",
+    "./themes/leibniz.css",
+    "./themes/orwell.css",
+    "./themes/pascal.css",
+    "./themes/plato.css",
+    "./themes/schema.css",
+    "./themes/simple.css",
+    "./themes/socrates.css",
+    "./themes/structure.css",
+    "./themes/turing.css",
+    "./themes/weber.css"
+  ]
+}

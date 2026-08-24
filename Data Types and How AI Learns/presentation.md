@@ -7,32 +7,27 @@ paginate: true
 footer: 'Data Types and How AI Learns (2026) · CC BY-NC 4.0'
 ---
 
-<!-- _class: lead -->
+<!-- _class: titlepage -->
 <!-- _paginate: false -->
 
-<div class="title-logos">
+<div class="topleft">
 
-<img src="assets/New Logo_0.png" alt="Chavi" height="70">
-<img src="assets/draw_logo.png" alt="DRAW" height="90">
-<img src="assets/sathi_logo.png" alt="Sathi" height="90">
+<img src="assets/New Logo_0.png" alt="Chavi" height="50">
+<img src="assets/draw_logo.png" alt="DRAW" height="50">
+<img src="assets/sathi_logo.png" alt="Sathi" height="50">
 
 </div>
 
 # Data Types and How AI Learns
 
-<div class="author">
 
-<span class="name">Dr Santam Chakraborty</span>  
-Senior Consultant  
-Department of Radiation Oncology  
-Tata Medical Center, India
-
-</div>
+### Dr Santam Chakraborty
+#### Senior Consultant, Department of Radiation Oncology
+##### Tata Medical Center, India
 
 ---
 
 <!-- footer: '' -->
-
 
 # Disclosures
 
@@ -41,33 +36,46 @@ Tata Medical Center, India
     - ICMR
     - DBT
     - Lady Tata Memorial Trust
-
 - Co-developer of DRAW - Deep Learning for Radiotherapy Autosegmentation Workflow (https://draw.chavi.ai)
 
 ---
 
 <!-- footer: 'Data Types and How AI Learns (2026) · CC BY-NC 4.0' -->
 
+<!-- _class: transition -->
+<!-- _paginate: false -->
+
+<!-- _class: cool-list -->
+
 # Outline
 
-1. What is Data?
-2. Types of Data
-3. How AI Learns
+1. *What is Data?*
+1. *Types of Data*
+1. *How AI Learns*
 
 ---
+
+<!-- _class: transition -->
+<!-- _paginate: false -->
+
+
 
 # What is Data?
 
-Data are information that is collected and analyzed to make decisions or draw conclusions. 
+Data are information that is collected and analyzed to make decisions or draw conclusions.
 
 Any thing can be data but in medical context typically information is sourced from medical notes, images, laboratory test results, procedure details etc. - **HeathCare Data**
 
+---
 
+<!-- _class: transition -->
+<!-- _paginate: false -->
 
+# Types of Data
 
 ---
 
-# What is special about Healthcare Data ?
+# What is special about Healthcare Data?
 
 1. **Sensitivity**: Medical data contains sensitive personal and health information that requires strict privacy and security measures.
 2. **Complexity**: Medical data can be complex and unstructured, making it difficult to analyze and interpret.
@@ -77,14 +85,14 @@ Any thing can be data but in medical context typically information is sourced fr
 
 ---
 <!-- _class: image-focus -->
-# Sources of Medical Data
+# Sources of Healthcare Data
 
-![w:900](assets/sources_of_medical_data.png)
+![w:800 center](assets/sources_of_medical_data.png)
 
-<p class="attribution">Source: By Brysonwong01 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=89546994.</p>
+> Source: By Brysonwong01 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=89546994.
+
 
 ---
-
 # What is the Practical Implication?
 
 1. Data can be **Big** and **Small** at the same time- For example Imaging Data
@@ -95,17 +103,12 @@ Any thing can be data but in medical context typically information is sourced fr
 6. Data will have **Bias** - Systematic process related to data collection that influences interpretation
 
 
----
-# Types of Healthcare Data
-
-
-
 
 ---
 <!-- _class: image-focus -->
 
 # Biases and their Classification
 
-![w:900](assets/classification_of_bias.png)
+![w:800 center](assets/classification_of_bias.png)
 
-<p class="attribution">Source: A taxonomy of biases: progress report https://catalogofbias.org/2020/02/11/a-taxonomy-of-biases-progress-report/.</p>
+> Source: A taxonomy of biases: progress report https://catalogofbias.org/2020/02/11/a-taxonomy-of-biases-progress-report/.
