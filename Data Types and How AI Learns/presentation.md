@@ -1,0 +1,90 @@
+---
+marp: true
+theme: sgpgi-scholar
+size: 16:9
+title: Data Types and How AI Learns
+footer: 'Data Types and How AI Learns (2026) · CC BY-NC 4.0'
+---
+
+<!-- _class: lead -->
+
+<div class="title-logos">
+
+<img src="assets/New Logo_0.png" alt="Chavi" height="70">
+<img src="assets/draw_logo.png" alt="DRAW" height="90">
+<img src="assets/sathi_logo.png" alt="Sathi" height="90">
+
+</div>
+
+# Data Types and How AI Learns
+
+<div class="author">
+
+<span class="name">Dr Santam Chakraborty</span>  
+Senior Consultant  
+Department of Radiation Oncology  
+Tata Medical Center, India
+
+</div>
+
+---
+
+<!-- footer: '' -->
+
+# Disclosures
+
+- Extramural funding from:
+    - ASCO
+    - ICMR
+    - DBT
+    - Lady Tata Memorial Trust
+
+- Co-developer of DRAW - Deep Learning for Radiotherapy Autosegmentation Workflow (https://draw.chavi.ai)
+
+---
+
+<!-- footer: 'Data Types and How AI Learns (2026) · CC BY-NC 4.0' -->
+
+# Outline
+
+1. What is Data?
+2. Types of Data
+3. How AI Learns
+
+---
+
+# What is Data?
+
+Data are information that is collected and analyzed to make decisions or draw conclusions. 
+
+Any thing can be data but in medical context typically information is sourced from medical notes, images, laboratory test results, procedure details etc. - **HeathCare Data**
+
+
+
+
+---
+
+# What is special about Healthcare Data ?
+
+1. **Sensitivity**: Medical data contains sensitive personal and health information that requires strict privacy and security measures.
+2. **Complexity**: Medical data can be complex and unstructured, making it difficult to analyze and interpret.
+3. **Regulation**: Medical data is subject to strict regulations and guidelines, such as HIPAA and GDPR, which govern how it can be collected, stored, and used.
+4. **Interpretation**: Medical data requires specialized knowledge and expertise to interpret and analyze effectively.
+5. **Ethics**: Medical data raises ethical considerations, such as patient consent and data sharing, that must be carefully considered.
+
+---
+<!-- _class: image-focus -->
+# Sources of Medical Data
+
+![w:900](assets/sources_of_medical_data.png)
+
+<p class="attribution">Source: By Brysonwong01 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=89546994.</p>
+
+---
+
+# What is the Practical Implication?
+
+1. Data can be **Big** and **Small** at the same time- For example Imaging Data
+2. Data will be **Longitudinal** - Collected over a period of Time
+3. Data will be **Incomplete** - Missing values, missing visits, missing tests
+4. Data will be stored in **Proprietary** systems - Not easily accessible

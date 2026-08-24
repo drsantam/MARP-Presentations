@@ -1,0 +1,369 @@
+/* @theme sgpgi-scholar
+ *
+ * SGPGI Scholar — an academic theme for Marp.
+ * Usage in front matter:  theme: sgpgi-scholar
+ * Render with:            marp --theme-set themes/sgpgi-scholar.css presentation.md
+ */
+
+@import 'default';
+
+:root {
+  --primary: #0e4d7a;
+  --primary-dark: #0a3a5e;
+  --accent: #c9a227;
+  --muted: #5a6b7b;
+  --bg-soft: #f4f7fa;
+  --rule: #e1e8ef;
+}
+
+/* ---------- Base slide ---------- */
+section {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  color: #1f2a37;
+  background: #ffffff;
+  padding: 60px 70px;
+  line-height: 1.45;
+  justify-content: flex-start !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Headings ---------- */
+section h1 {
+  color: var(--primary);
+  font-weight: 700;
+  border-bottom: 4px solid var(--accent);
+  padding-bottom: 0.2em;
+  margin-bottom: 0.4em;
+  font-size: 1.9em;
+}
+section h2 {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.4em;
+  margin-top: 0.6em;
+}
+section h3 {
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* ---------- Body & emphasis ---------- */
+section p { margin: 0.4em 0; }
+section strong { color: var(--primary-dark); }
+section em { color: var(--muted); }
+
+/* ---------- Lists ---------- */
+section ul, section ol { margin-left: 0; padding-left: 1.2em; }
+section li { margin: 0.25em 0; }
+section ul > li::marker { color: var(--accent); }
+section ol > li::marker { color: var(--primary); font-weight: 700; }
+
+/* ---------- Blockquote / callout ---------- */
+section blockquote {
+  border-left: 5px solid var(--accent);
+  background: var(--bg-soft);
+  margin: 1em 0;
+  padding: 0.6em 1em;
+  font-style: italic;
+  color: var(--primary-dark);
+}
+
+/* ---------- Code ---------- */
+section pre {
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.8em 1em;
+  font-size: 0.8em;
+}
+section code { color: var(--primary-dark); }
+section pre code { color: #1f2a37; }
+
+/* ---------- Tables ---------- */
+section table { border-collapse: collapse; margin: 1em 0; }
+section th, section td { border: 1px solid #d6dee6; padding: 0.4em 0.8em; }
+section th { background: var(--primary); color: #fff; }
+section tr:nth-child(even) td { background: var(--bg-soft); }
+
+/* ---------- Footer ---------- */
+footer {
+  color: var(--muted);
+  font-size: 0.5em;
+  letter-spacing: 0.02em;
+  border-top: 1px solid var(--rule);
+  padding-top: 4px;
+}
+
+/* ---------- Pagination ---------- */
+section::after {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.6em;
+}
+
+/* ---------- Title (lead) slide ---------- */
+section.lead {
+  background: linear-gradient(135deg, #ffffff 0%, var(--bg-soft) 100%);
+  text-align: center;
+  /* No horizontal padding so the logo strip can span edge-to-edge */
+  padding: 0;
+}
+section.lead h1 {
+  border-bottom: none;
+  font-size: 2.4em;
+  margin: 0.2em 70px 0;
+  color: var(--primary);
+  text-align: center;
+}
+section.lead h1::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0.3em auto 0;
+}
+section.lead h2, section.lead h3 {
+  color: var(--muted);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ---------- Logo strip spanning the top half, edge to edge ---------- */
+.title-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  /* Top half of a 720px (16:9) slide = 360px */
+  height: 50%;
+  width: 100%;
+  margin: 0;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-bottom: 1px solid var(--rule);
+}
+.title-logos img {
+  /* Fill the strip height while keeping aspect ratio */
+  height: 80%;
+  width: auto;
+  max-width: 28%;
+  object-fit: contain;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 8px 14px;
+  background: #ffffff;
+  box-shadow: 0 3px 10px rgba(14, 77, 122, 0.10);
+}
+
+/* ---------- Author block on title slide ---------- */
+.author {
+  color: var(--muted);
+  font-size: 0.7em;
+  margin: 1em 70px 0;
+  line-height: 1.5;
+  text-align: center;
+}
+.author .name {
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+/* ============================================================
+ * Reusable slide layouts
+ * Use per-slide with a local directive:  <!-- _class: name -->
+ * ============================================================ */
+
+/* ---------- Section divider ----------
+ * Full-bleed primary background, centered white heading.
+ * Usage: <!-- _class: divider -->
+ */
+section.divider {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  padding: 60px 70px;
+}
+section.divider h1 {
+  color: #fff;
+  border-bottom: none;
+  font-size: 2.2em;
+  margin: 0;
+}
+section.divider h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0.3em auto 0;
+}
+section.divider p,
+section.divider h2,
+section.divider h3 {
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+section.divider footer {
+  color: rgba(255, 255, 255, 0.5);
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ---------- Two-column layout ----------
+ * Side-by-side columns. First H1 spans full width as the title;
+ * subsequent H2/H3 elements become column headers.
+ * Usage: <!-- _class: two-column -->
+ */
+section.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-content: start;
+}
+/* First h1 spans both columns as the slide title */
+section.two-column > h1 {
+  grid-column: 1 / -1;
+}
+/* Each h2 starts a new column section */
+section.two-column > h2 {
+  grid-column: auto;
+  margin-top: 0;
+}
+
+/* ---------- Image-focused layout ----------
+ * Large centered image with a small caption below.
+ * Usage: <!-- _class: image-focus -->
+ */
+section.image-focus {
+  text-align: center;
+  justify-content: center !important;
+  padding: 40px 70px;
+}
+section.image-focus img {
+  max-height: 420px;
+  max-width: 90%;
+  object-fit: contain;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(14, 77, 122, 0.12);
+  flex-shrink: 1;
+  min-height: 0;
+}
+section.image-focus h1 {
+  font-size: 1.3em;
+  border-bottom: none;
+  margin-bottom: 0.2em;
+}
+section.image-focus p {
+  color: var(--muted);
+  font-size: 0.6em;
+  margin: 0.4em 0 0;
+}
+section.image-focus .attribution {
+  font-size: 0.4em;
+  margin-top: 0.6em;
+  flex-shrink: 0;
+  color: var(--muted);
+  font-style: italic;
+  text-align: center;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* ---------- Quote / highlight layout ----------
+ * Large centered statement for key takeaways.
+ * Usage: <!-- _class: quote -->
+ */
+section.quote {
+  justify-content: center;
+  text-align: center;
+  background: var(--bg-soft);
+  padding: 80px 100px;
+}
+section.quote h1 {
+  font-size: 1.6em;
+  border-bottom: none;
+  color: var(--primary-dark);
+  margin: 0;
+}
+section.quote h1::before {
+  content: '\201C';
+  display: block;
+  font-size: 2.5em;
+  color: var(--accent);
+  line-height: 0.8;
+  margin-bottom: 0.2em;
+}
+section.quote p {
+  color: var(--muted);
+  font-size: 0.7em;
+  margin-top: 1em;
+}
+
+/* ============================================================
+ * Attribution & References
+ * ============================================================ */
+
+/* ---------- Image / content attribution ----------
+ * Small grey text pinned to the bottom-right of a slide.
+ * Usage:  <footer class="attribution">Source: Smith et al. (2023)</footer>
+ *      or place anywhere:  <p class="attribution">Photo by J. Doe</p>
+ */
+.attribution {
+  font-size: 0.45em;
+  color: var(--muted);
+  font-style: italic;
+  text-align: right;
+  margin-top: 0.5em;
+  line-height: 1.3;
+}
+footer.attribution {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* ---------- References slide ----------
+ * Use on a dedicated references slide.
+ * Usage: <!-- _class: references -->
+ */
+section.references {
+  font-size: 0.55em;
+  line-height: 1.6;
+}
+section.references h1 {
+  font-size: 1.6em;
+  margin-bottom: 0.6em;
+}
+section.references ol {
+  padding-left: 1.5em;
+  counter-reset: ref;
+  list-style: none;
+}
+section.references ol > li {
+  counter-increment: ref;
+  margin: 0.3em 0;
+  padding-left: 0.5em;
+  text-indent: -2em;
+}
+section.references ol > li::before {
+  content: '[' counter(ref) ']  ';
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ---------- Inline reference citations ----------
+ * Usage:  <cite>Smith et al. 2023</cite>
+ *      or numbered:  <cite>[1]</cite>
+ */
+cite {
+  color: var(--primary);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.85em;
+}
