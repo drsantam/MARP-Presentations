@@ -6,6 +6,7 @@
  */
 
 @import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
 
 :root {
   --primary: #0e4d7a;
@@ -14,16 +15,18 @@
   --muted: #5a6b7b;
   --bg-soft: #f4f7fa;
   --rule: #e1e8ef;
+  --font-heading: 'Merriweather', Georgia, 'Times New Roman', serif;
+  --font-body: 'Merriweather', Georgia, 'Times New Roman', serif;
 }
 
 /* ---------- Base slide ---------- */
 section {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 28px;
   color: #1f2a37;
   background: #ffffff;
   padding: 60px 70px;
-  line-height: 1.45;
+  line-height: 1.5;
   justify-content: flex-start !important;
   display: flex;
   flex-direction: column;
@@ -31,23 +34,29 @@ section {
 
 /* ---------- Headings ---------- */
 section h1 {
+  font-family: var(--font-heading);
   color: var(--primary);
   font-weight: 700;
   border-bottom: 4px solid var(--accent);
   padding-bottom: 0.2em;
   margin-bottom: 0.4em;
   font-size: 1.9em;
+  line-height: 1.2;
 }
 section h2 {
+  font-family: var(--font-heading);
   color: var(--primary);
   font-weight: 600;
   font-size: 1.4em;
   margin-top: 0.6em;
+  line-height: 1.25;
 }
 section h3 {
+  font-family: var(--font-heading);
   color: var(--primary-dark);
   font-weight: 600;
   font-size: 1.1em;
+  line-height: 1.3;
 }
 
 /* ---------- Body & emphasis ---------- */
@@ -99,6 +108,7 @@ footer {
 
 /* ---------- Pagination ---------- */
 section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
   color: var(--accent);
   font-weight: 700;
   font-size: 0.6em;
@@ -153,11 +163,6 @@ section.lead h2, section.lead h3 {
   width: auto;
   max-width: 28%;
   object-fit: contain;
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-  padding: 8px 14px;
-  background: #ffffff;
-  box-shadow: 0 3px 10px rgba(14, 77, 122, 0.10);
 }
 
 /* ---------- Author block on title slide ---------- */
@@ -249,9 +254,6 @@ section.image-focus img {
   max-height: 420px;
   max-width: 90%;
   object-fit: contain;
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(14, 77, 122, 0.12);
   flex-shrink: 1;
   min-height: 0;
 }

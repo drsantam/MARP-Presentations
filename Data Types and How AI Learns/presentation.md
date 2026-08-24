@@ -3,10 +3,12 @@ marp: true
 theme: sgpgi-scholar
 size: 16:9
 title: Data Types and How AI Learns
+paginate: true
 footer: 'Data Types and How AI Learns (2026) · CC BY-NC 4.0'
 ---
 
 <!-- _class: lead -->
+<!-- _paginate: false -->
 
 <div class="title-logos">
 
@@ -30,6 +32,7 @@ Tata Medical Center, India
 ---
 
 <!-- footer: '' -->
+
 
 # Disclosures
 
@@ -88,3 +91,21 @@ Any thing can be data but in medical context typically information is sourced fr
 2. Data will be **Longitudinal** - Collected over a period of Time
 3. Data will be **Incomplete** - Missing values, missing visits, missing tests
 4. Data will be stored in **Proprietary** systems - Not easily accessible
+5. Data will be influenced by **Unknown** factors - As we are not fully aware of the complete biological processes involved
+6. Data will have **Bias** - Systematic process related to data collection that influences interpretation
+
+
+---
+# Types of Healthcare Data
+
+
+
+
+---
+<!-- _class: image-focus -->
+
+# Biases and their Classification
+
+![w:900](assets/classification_of_bias.png)
+
+<p class="attribution">Source: A taxonomy of biases: progress report https://catalogofbias.org/2020/02/11/a-taxonomy-of-biases-progress-report/.</p>
