@@ -359,11 +359,53 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 
 ---
-# How do Neural Networks work ?
 
+<!-- _class: split-box -->
 
+# Neural Network "Architecture"
 
+<div class='box'>
 
+ - Each **Node** converts an input number to an output number between 0 - 1
 
+ - The **output** value (between 0 - 1) of a node becomes the input value for the weights in the next layer.
+
+ - The activation function can be of different types. Most common type is called a **ReLU (Rectified Linear Unit)**.
+
+ - A ReLU is nothing special: If the input is positive the output is 1 else 0. 
+
+</div>
+
+<div>
+
+![w:500px](assets/neural_network.svg)
+
+> The first layer of the neural network essentially takes the arbitrary number and converts it into 0 - 1 (analogous to probablities). Note that this is a special architecture type called "Feed Forward". 
+
+</div>
+
+---
+
+<!-- _class: split-box -->
+
+# Neural Network : What happens Inside ?
+
+<div class='box'>
+
+- The NN has 10 nodes - **3** in 1st layer, **4** in second layer and **3** in third layer
+- Each connection between node has a **Weight** and **Bias**.
+- There are total **27** such connections (3 in layer 1, 12 in layer 2, and 12 in layer 3) 
+- This NN has **27 weights** and **27 biases**. 
+- **"Training"** involves changing the values of the weights and biases to minimize error in prediction.
+
+</div>
+
+<div>
+
+![w:500px](assets/neural_network.svg)
+
+> The first layer of the neural network essentially takes the arbitrary number and converts it into 0 - 1 (analogous to probablities). Note that this is a special architecture type called "Feed Forward". 
+
+</div>
 
 ---
