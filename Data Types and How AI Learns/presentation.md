@@ -396,7 +396,8 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 - Each connection between node has a **Weight** and **Bias**.
 - There are total **27** such connections (3 in layer 1, 12 in layer 2, and 12 in layer 3) 
 - This NN has **27 weights** and **27 biases**. 
-- **"Training"** involves changing the values of the weights and biases to minimize error in prediction.
+- Each of these parameters can be tuned to change the model output value. 
+
 
 </div>
 
@@ -409,16 +410,53 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 </div>
 
 ---
+
+# What happens during Training ?
+
+- The model is starts off with a **Random** set of values for the weights and biases. 
+- The model then computes the output from the **training data** for each of the observations. 
+- After this is computed, the model calculates the **error** between the predicted output and the actual output. 
+- The model then adjusts the weights and biases to **minimize** the error. 
+- This process is repeated for a number of iterations (or **epochs**) until the error is minimized. 
+
+---
+
 <!-- _class: split-box -->
 
-# Why Neural Networks Need GPU ?
+# What about Generative AI ? 
 
-<div class = 'box'>
+<div class='box'>
 
-- Mathematically a neural network is a Matrix multiplication.
+- **Generative** AI refers to a class of Neural networks that used to **generate** text, images, audio and other forms of media. 
 
-- These need to be done in parallel so that computation can occur in parallel
+- These networks are typically trained on large datasets which allows them to exhibit behaviours like **memory** and **recall**.
 
-- Specialized chips like **NPU** and **TPU** are now available specifically designed for this matrix multiplication and handling other parts of the neural network. 
+- These models do not **create** anything. They predict and predict with a great degree of accuracy !
+
+
+</div>
 
 <div>
+
+![w:500px](assets/gen_ai_vs_dis_ai.png)
+
+>  Note the difference in the input and output of a generative and discrimnative neural network. Source : By Lwneal - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=153580528
+
+</div>
+
+---
+
+
+# Key Breakthrough: Attention
+
+- The key challenge generative AI algorithms had to solve was how to sequence information. 
+
+- "The Cat Ate the Rat" and "The Rat Ate the Cat" - same words with opposite meanings.
+
+- Key step involved -> convert each word into a numerical representation called embedding where similiar words have similiar embeddings. 
+
+- After this we do "positional encoding" - where numerical representations are generated for the location of the word w.r.t others. 
+
+- 
+
+
