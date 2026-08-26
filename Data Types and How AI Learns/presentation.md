@@ -409,5 +409,16 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 </div>
 
 ---
+<!-- _class: split-box -->
 
 # Why Neural Networks Need GPU ?
+
+<div class = 'box'>
+
+- Mathematically a neural network is a Matrix multiplication.
+
+- These need to be done in parallel so that computation can occur in parallel
+
+- Specialized chips like **NPU** and **TPU** are now available specifically designed for this matrix multiplication and handling other parts of the neural network. 
+
+<div>
