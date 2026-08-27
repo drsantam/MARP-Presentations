@@ -1,0 +1,70 @@
+name: Deploy Presentations to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Build presentations
+        run: |
+          mkdir -p _site
+          # Find every presentation.md and convert to HTML
+          find . -name "presentation.md" -not -path "./_site/*" | while read -r file; do
+            dir=$(dirname "$file")
+            name=$(basename "$dir")
+            echo "Building: $name"
+            mkdir -p "_site/$name"
+            # Copy assets so images resolve
+            cp -r "$dir/assets" "_site/$name/assets" 2>/dev/null || true
+            cp -r "$dir/diagrams" "_site/$name/diagrams" 2>/dev/null || true
+            marp --theme-set themes/sgpgi-scholar.css --html "$file" -o "_site/$name/index.html"
+          done
+
+      - name: Generate index page
+        run: |
+          # Build the list items
+          items=""
+          for d in _site/*/; do
+            name=$(basename "$d")
+            if [ "$name" != "assets" ] && [ -f "$d/index.html" ]; then
+              items="$items    <li><a href=\"$name/\">$name</a></li>\n"
+            fi
+          done
+          # Inject into template
+          sed "s|<!--PRESENTATIONS-->|$items|" templates/index.html > _site/index.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
