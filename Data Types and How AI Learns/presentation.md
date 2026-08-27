@@ -449,14 +449,43 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 # Key Breakthrough: Attention
 
-- The key challenge generative AI algorithms had to solve was how to sequence information. 
+- How to extract information about the sequence of words in natural language. 
 
-- "The Cat Ate the Rat" and "The Rat Ate the Cat" - same words with opposite meanings.
+  - "The Cat Ate the Rat" and "The Rat Ate the Cat" - same words with opposite meanings.
 
-- Key step involved -> convert each word into a numerical representation called embedding where similiar words have similiar embeddings. 
+- Key step involved -> convert text into a numerical representation called **embedding** where similiar words have similiar **embeddings**. 
 
-- After this we do "positional encoding" - where numerical representations are generated for the location of the word w.r.t others. 
+- After this we do **"positional encoding"** - where numerical representations are generated for the location of the word w.r.t others. 
 
-- 
+- The key breakthrough in **"Attention"** was to assign each embedding with a query (Q), key (K) and value (V)
 
 
+---
+
+<!-- _class: split-box -->
+
+
+# Query, Key and Value : What do they mean ?
+
+<div class='box'>
+
+ - Query refers to the "word" we want to lookup
+
+ - Key refers to the other words to which this query is related. 
+
+ - Value refers to the "strength" or "importance" of this relationship
+
+ - Attention allowed us to process multiple keys together instead of sequentially allowing massive datasets to be used for training.
+
+</div>
+
+<div>
+
+ ![w=500](assets/attention.png)
+
+ > Source: https://poloclub.github.io/transformer-explainer/. Fun fact the original paper has been cited by > 250,000 articles. See Vaswani et al (Proceedings of the International Conference on Neural Information Processing Systems, 2017) for more details.
+
+</div>
+
+
+ 
