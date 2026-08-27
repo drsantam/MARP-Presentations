@@ -45,17 +45,24 @@ jobs:
       - name: Generate index page
         run: |
           # Build the list items with per-presentation last-updated date
-          items=""
-          find . -name "presentation.md" -not -path "./_site/*" | sort | while read -r file; do
+          tmpfile=$(mktemp)
+          while IFS= read -r file; do
             dir=$(dirname "$file")
             name=$(basename "$dir")
             if [ -f "_site/$name/index.html" ]; then
               last_updated=$(git log -1 --format="%ad" --date=format:"%d %b %Y" -- "$file")
-              items="$items    <li><a href=\"$name/\">$name</a><div class=\"date\">Updated: $last_updated</div></li>\n"
+              echo "    <li><a href=\"$name/\">$name</a><div class=\"date\">Updated: $last_updated</div></li>" >> "$tmpfile"
             fi
-          done
+          done < <(find . -name "presentation.md" -not -path "./_site/*" | sort)
           # Inject presentations into template
-          sed "s|<!--PRESENTATIONS-->|$items|" templates/index.html > _site/index.html
+          awk -v items_file="$tmpfile" '
+            /<!--PRESENTATIONS-->/ {
+              while ((getline line < items_file) > 0) print line
+              next
+            }
+            { print }
+          ' templates/index.html > _site/index.html
+          rm -f "$tmpfile"
 
       - uses: actions/upload-pages-artifact@v3
         with:
