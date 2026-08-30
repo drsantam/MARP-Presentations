@@ -505,3 +505,57 @@ cite {
   font-weight: 600;
   font-size: 0.85em;
 }
+
+/* ============================================================
+ * Auto-fitting layouts — shrink body text on dense slides.
+ *
+ * Marp renders to a fixed-size canvas (1280x720 for 16:9), so
+ * container-query units resolve to constants and offer no true
+ * auto-fit. These classes instead apply a fixed em reduction to
+ * BODY content only (paragraphs, lists, blockquotes). The slide
+ * title (h1) and other headings are left at their default size so
+ * the title keeps its prominence regardless of how much body text
+ * the slide holds.
+ *
+ * Pick the variant by how much text the slide holds:
+ *   <!-- _class: fit -->        mild shrink   (~25px body)
+ *   <!-- _class: fit-tight -->  moderate      (~21px body)
+ *   <!-- _class: fit-dense -->  aggressive    (~17px body)
+ * ============================================================ */
+
+/* ---------- Mild shrink ----------
+ * Use for slides that are only slightly over a single page.
+ */
+section.fit p,
+section.fit ul,
+section.fit ol,
+section.fit li,
+section.fit blockquote {
+  font-size: 0.9em;
+}
+
+/* ---------- Moderate shrink ----------
+ * Use for slides with a moderate amount of extra content.
+ */
+section.fit-tight p,
+section.fit-tight ul,
+section.fit-tight ol,
+section.fit-tight li,
+section.fit-tight blockquote {
+  font-size: 0.75em;
+}
+
+/* ---------- Aggressive shrink ----------
+ * Use for the densest slides (e.g. long reference lists, many
+ * bullet points). Readability drops, so prefer splitting the
+ * slide where possible.
+ */
+section.fit-dense p,
+section.fit-dense ul,
+section.fit-dense ol,
+section.fit-dense li,
+section.fit-dense blockquote {
+  font-size: 0.6em;
+}
+
+

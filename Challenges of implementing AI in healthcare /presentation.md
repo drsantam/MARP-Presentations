@@ -4,10 +4,11 @@ theme: sgpgi-scholar
 size: 16:9
 title: Challenges of implementing AI in healthcare
 paginate: true
-footer: 'Challenges of implementing AI in healthcare (2026) · CC BY-NC 4.0'
+footer: 'Challenges of implementing AI in healthcare & some solutions (2026) · CC BY-NC 4.0'
 ---
 <!-- _class: titlepage -->
 <!-- _paginate: false -->
+<!-- _footer: '' -->
 
 <div class="topleft">
 
@@ -25,8 +26,6 @@ footer: 'Challenges of implementing AI in healthcare (2026) · CC BY-NC 4.0'
 ###### Tata Medical Center, India
 
 ---
-
-<!-- footer: '' -->
 
 # Disclosures
 
@@ -110,7 +109,62 @@ footer: 'Challenges of implementing AI in healthcare (2026) · CC BY-NC 4.0'
 
 <div>
 
+![width=600px](assets/google_nightingale.png)
 
+
+ > Source: https://www.theguardian.com/technology/2019/nov/12/google-medical-data-project-nightingale-secret-transfer-us-health-information
+
+</div>
+
+---
+
+<!-- _class: fit -->
+
+# Data Misuse
+1. Risk of Patient Reidentification & loss of privacy
+    - AI models can learn to recognize identity specific features in the dataset. 
+    - Use of the same data in other forms increases the risk manifold.  
+
+2. Risk of Data poisoning attacks from malicious actors. 
+    - Both model and dataset can be manipulated. 
+    - Even small number of "incorrectly" labelled images can change the model performance (1 - 2% is sufficient).
+
+3. Risk of misclassification due to input manipulation.
+    - Here the adversary manipulates the "input" when interacting with the trained model. 
+    - Even small changes in input can drastically change the model's output.
+
+    > Source : Khanjahani E, Iezadi S, Marshall S, Bruzdewicz B. Privacy, security, and reliability risks of artificial intelligence in healthcare: a systematic review of empirical evidence. Int J Med Inform 2026;221:106672. https://doi.org/10.1016/j.ijmedinf.2026.106672.
+
+---
+
+<!-- _class: three-images -->
+
+# Examples
+
+<div>
+
+![width=600px](assets/deidentification.png)
+
+ > **Source:** 
+    Packhäuser K, Gündel S, Münster N, Syben C, Christlein V, Maier A. Deep learning-based patient re-identification is able to exploit the biometric nature of medical chest X-ray data. Sci Rep 2022;12:14851. https://doi.org/10.1038/s41598-022-19045-3.
+  
+</div>
+
+<div>
+
+![width=600px](assets/adversarial_attacks.jpeg)
+
+ > **Source:** 
+    Finlayson SG, Bowers JD, Ito J, Zittrain JL, Beam AL, Kohane IS. Adversarial attacks on medical machine learning. Science 2019;363:1287–9. https://doi.org/10.1126/science.aaw4399.
+  
+</div>
+
+<div>
+
+![width=600px](assets/injecting_nodules.png)
+
+ > **Source:** 
+    Mirsky Y, Mahler T, Shelef I, Elovici Y. CT-GAN: Malicious tampering of 3D medical imagery using deep learning. arXiv [CsCR] 2019. https://doi.org/10.48550/arXiv.1901.03597.
 
 </div>
 
