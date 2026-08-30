@@ -259,4 +259,6 @@ footer: 'Challenges of implementing AI in healthcare & some solutions (2026) · 
 
 ![width=600px](assets/challenges_step.svg)
 
+> Hieararchy of challenges involved in AI system development in Healthcare
+
 </div>
