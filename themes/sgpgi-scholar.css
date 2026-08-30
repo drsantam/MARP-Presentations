@@ -296,6 +296,17 @@ section.split-box img {
   max-height: 350px;
   object-fit: contain;
 }
+/* Center images that are wrapped in a plain <div> (not .box) */
+section.split-box > div:not(.box) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+section.split-box > div:not(.box) img {
+  margin: 0 auto;
+}
 section.split-box blockquote {
   grid-column: 2;
   font-size: 0.55em;

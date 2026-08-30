@@ -39,7 +39,7 @@ jobs:
             # Copy assets so images resolve
             cp -r "$dir/assets" "_site/$name/assets" 2>/dev/null || true
             cp -r "$dir/diagrams" "_site/$name/diagrams" 2>/dev/null || true
-            marp --theme-set themes/sgpgi-scholar.css --html "$file" -o "_site/$name/index.html"
+            marp --theme-set themes/sgpgi-scholar.css --html "$file" -o "_site/$name/index.html" < /dev/null
           done
 
       - name: Generate index page

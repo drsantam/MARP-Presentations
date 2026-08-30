@@ -139,7 +139,7 @@ footer: 'Challenges of implementing AI in healthcare & some solutions (2026) · 
 
 <!-- _class: three-images -->
 
-# Examples
+# Data Misuse: Examples
 
 <div>
 
@@ -168,3 +168,64 @@ footer: 'Challenges of implementing AI in healthcare & some solutions (2026) · 
 
 </div>
 
+---
+
+<!-- _class: split-box -->
+
+# Social Inequity
+
+<div>
+
+![width=800px](assets/social_inequity.png)
+
+ > Source: 
+    Omar, M., Soffer, S., Agbareia, R. et al. Sociodemographic biases in medical decision making by large language models. Nat Med 31, 1873–1881 (2025). https://doi.org/10.1038/s41591-025-03626-6
+
+</div>
+
+<div class='box'>
+
+- These models are trained using **"poorly"** quality controlled data. As a result the biases in the medical records used in training propagates in the output. 
+
+- For example HNI are prescribed more expensive tests (mimicing what happens in capitalist health care systems)
+
+- Using such systems without guardrails may translate into further perpetuation of inequity.
+
+</div>
+
+---
+
+<!-- _class: image-focus -->
+
+# How Bias is Encoded in AI models
+
+![width = 900px](assets/encoded_bias.png)
+
+  > Source: https://timesofindia.indiatimes.com/city/delhi/frustrated-elderly-father-kills-schizophrenic-son-along-with-friend-both-held/articleshow/133618031.cms
+
+
+---
+
+<!-- _class: split-box -->
+
+# Susceptibility to Misinformation
+
+<div>
+
+![width=600px](assets/vulnerability_misinformation.jpg)
+
+> Source: 
+
+</div>
+
+<div class='box'>
+
+- Ability of the model to detect medical misinformation.
+
+- Found that models failed to detect this misinformation in **31%** of the tested prompts. 
+
+- When wrapped with logical fallacy statements the susceptibility **decreased**.
+
+- Model safety will not be improved by scaling up the model parameters.
+
+</div>
