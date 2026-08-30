@@ -372,7 +372,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
  - The activation function can be of different types. Most common type is called a **ReLU (Rectified Linear Unit)**.
 
- - A ReLU is nothing special: If the input is positive the output is 1 else 0. 
+ - A ReLU is nothing special: If the input is positive the output is the value else 0. 
 
 </div>
 
@@ -395,7 +395,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 - The NN has 10 nodes - **3** in 1st layer, **4** in second layer and **3** in third layer
 - Each connection between node has a **Weight** and **Bias**.
 - There are total **27** such connections (3 in layer 1, 12 in layer 2, and 12 in layer 3) 
-- This NN has **27 weights** and **27 biases**. 
+- This NN has **27 weights** and **10 biases**. Note that each node has a single bias term.
 - Each of these parameters can be tuned to change the model output value. 
 
 
@@ -481,11 +481,41 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 <div>
 
- ![w=500](assets/attention.png)
+ ![w=600](assets/attention.png)
 
  > Source: https://poloclub.github.io/transformer-explainer/. Fun fact the original paper has been cited by > 250,000 articles. See Vaswani et al (Proceedings of the International Conference on Neural Information Processing Systems, 2017) for more details.
 
 </div>
 
+---
 
- 
+<!-- _class: split-box -->
+
+
+ # Beyond Pre-trained Transformers
+
+<div class='box'>
+
+ - Joint Embedding Predictive Architecture (JEPA) is proposed as a "World Modelling" approach.
+
+- The input is converted to embeddings.
+
+- The predictor module predicts the embedding from this input. 
+
+- We want to make this embedding as close as possible to embedding of the actual output desired. 
+
+</div>
+
+<div>
+
+![width:600px](assets/joint_embedding_model.png)
+
+> Source : https://www.youtube.com/watch?v=kYkIdXwW2AE (Video on Youtube) - referencing JEPA models 
+
+</div>
+
+---
+
+# Summary & Take Home
+
+- 
