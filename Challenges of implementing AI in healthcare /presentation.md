@@ -204,6 +204,8 @@ footer: 'Challenges of implementing AI in healthcare & some solutions (2026) · 
   > Source: https://timesofindia.indiatimes.com/city/delhi/frustrated-elderly-father-kills-schizophrenic-son-along-with-friend-both-held/articleshow/133618031.cms
 
 
+
+
 ---
 
 <!-- _class: split-box -->
@@ -227,5 +229,34 @@ footer: 'Challenges of implementing AI in healthcare & some solutions (2026) · 
 - When wrapped with logical fallacy statements the susceptibility **decreased**.
 
 - Model safety will not be improved by scaling up the model parameters.
+
+</div>
+
+---
+
+<!-- _class: split-box -->
+
+# Operational Challenges
+
+<div class="box">
+
+- Interoperability with existing medical systems and data standards.
+
+- IT infrastructure requirements to deploy and run the systems.
+
+- Continous monitoring of performance to prevent degradation.
+
+- Model Explainability and Transparency.
+
+- Cost of implementation 
+
+- Legal liability 
+
+</div>
+
+
+<div>
+
+![width=600px](assets/challenges_step.svg)
 
 </div>
