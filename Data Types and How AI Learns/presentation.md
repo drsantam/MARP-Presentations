@@ -68,7 +68,7 @@ footer: 'Data Types and How AI Learns (2026) · CC BY-NC 4.0'
 
 Data are information that is collected and analyzed to make decisions or draw conclusions.
 
-Any thing can be data but in medical context typically information is sourced from medical notes, images, laboratory test results, procedure details etc. - **HeathCare Data**
+Any thing can be data but in medical context typically information is sourced from medical notes, images, laboratory test results, procedure details etc. - **Healthcare Data**
 
 ---
 
@@ -90,7 +90,7 @@ Any thing can be data but in medical context typically information is sourced fr
 |Interval|Yes|Yes|Meaningful| Absent | Except Division |
 |Ratio|Yes| Yes |Meaningful| Present | All Operations|
 
-> Note a true zero means that zero denotes abscence.
+> Note a true zero means that zero denotes absence.
 
 ---
 
@@ -161,7 +161,7 @@ Any thing can be data but in medical context typically information is sourced fr
 
 1. **Data Cleaning** : Removing incorrect entries (Domain Knowledge needed). Remember no matter the AI GIGO. 
 
-2. **Data Integration**: Merging data from heterogenous sources into a single dataset. 
+2. **Data Integration**: Merging data from heterogeneous sources into a single dataset. 
 
 3. **Data Transformation**: Converting data into representations which are suitable for ML models.
 
@@ -195,7 +195,7 @@ Any thing can be data but in medical context typically information is sourced fr
 
 ![w:500](assets/impact_of_scaling.png)
 
- > In this experiment, proline values where highly variable (larger range) while hue had a small range which resulted in model "learning" differences were due to proline values! Image source : https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html
+ > In this experiment, proline values were highly variable (larger range) while hue had a small range which resulted in model "learning" differences were due to proline values! Image source : https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html
 
 </div>
 
@@ -209,7 +209,7 @@ Any thing can be data but in medical context typically information is sourced fr
 - **Feature Selection**: Selecting a subset of relevant features for model training.
 - **Dimensionality Reduction**: Reducing the number of random variables under consideration.
 
-Feature selection is widely practiced to improve model ***"performance"***. However fundamentally biased as it is dependant on the "Outcome" variable. Dimensionality reduction is better but more complex to interpret & explain
+Feature selection is widely practiced to improve model ***"performance"***. However fundamentally biased as it is dependent on the "Outcome" variable. Dimensionality reduction is better but more complex to interpret & explain
 
 </div>
 
@@ -230,10 +230,10 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 |Modality of Data| Preprocessing Steps | Purpose |
 |---|---|---|
-|Tabular Data| Missing value imputation, outlier detection, scaling and encoding | Normaize the data matrix for classification & regression |
-|NLP| Toeknization, Lowercasing, Stop word removal, Stemming / Lemmatization, Vectorization | Convert text strings into numerical representations and remove linguistic noise|
+|Tabular Data| Missing value imputation, outlier detection, scaling and encoding | Normalize the data matrix for classification & regression |
+|NLP| Tokenization, Lowercasing, Stop word removal, Stemming / Lemmatization, Vectorization | Convert text strings into numerical representations and remove linguistic noise|
 |Vision| Resizing, Rescaling, Histogram equalization| Makes the input data format uniform, expands dataset to avoid overfitting|
-|Time Series| Differncing, Rolling window calculation | Stabilizing Trends and variations, Sequential dependancies |
+|Time Series| Differencing, Rolling window calculation | Stabilizing Trends and variations, Sequential dependencies |
 
 ---
 
@@ -289,7 +289,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 - Fitting the data means that we reduce the difference between the predicted and actual values.
 
-- Quiz : Which of theset wo lines are "fitting" the data better ?
+- Quiz : Which of these two lines are "fitting" the data better ?
 
 </div>
 
@@ -312,7 +312,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 - The red dots represent the "training" data. 
 
-- The black dosts represent the "testing" data
+- The black dots represent the "testing" data
 
 - A classic illustration of what happens when you have an "overfitted" model. 
 
@@ -330,7 +330,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 - AI Learning is a mathematical optimization procedure computed using a statistical procedure.
 
-- Unlike **programming** there is no set recipie or algorthm to follow.
+- Unlike **programming** there is no set recipe or algorithm to follow.
 
 - Each type is meant for specific types of tasks.
 
@@ -349,9 +349,9 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 # How does AI Predict ?
 
 - The broad approaches are:
-  - Compute **coefficients** for each variable & figure how how these variables interact with each other (a.k.a Regression)
+  - Compute **coefficients** for each variable & figure out how these variables interact with each other (a.k.a Regression)
   - **Partition** the observations based on variable values (a.k.a tree based methods). 
-  - Use **similiar features** to make predictions (a.k.a nearest neighbour).
+  - Use **similar features** to make predictions (a.k.a nearest neighbour).
   - Compute **non-linear transformation** of variables (a.k.a neural networks).
 
   > Note that this is not a clear classification. Some methods called "ensemble methods" may use a combination. 
@@ -380,7 +380,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 ![w:500px](assets/neural_network.svg)
 
-> The first layer of the neural network essentially takes the arbitrary number and converts it into 0 - 1 (analogous to probablities). Note that this is a special architecture type called "Feed Forward". 
+> The first layer of the neural network essentially takes the arbitrary number and converts it into 0 - 1 (analogous to probabilities). Note that this is a special architecture type called "Feed Forward". 
 
 </div>
 
@@ -405,7 +405,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 ![w:500px](assets/neural_network.svg)
 
-> The first layer of the neural network essentially takes the arbitrary number and converts it into 0 - 1 (analogous to probablities). Note that this is a special architecture type called "Feed Forward". 
+> The first layer of the neural network essentially takes the arbitrary number and converts it into 0 - 1 (analogous to probabilities). Note that this is a special architecture type called "Feed Forward". 
 
 </div>
 
@@ -413,7 +413,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 # What happens during Training ?
 
-- The model is starts off with a **Random** set of values for the weights and biases. 
+- The model starts off with a **Random** set of values for the weights and biases. 
 - The model then computes the output from the **training data** for each of the observations. 
 - After this is computed, the model calculates the **error** between the predicted output and the actual output. 
 - The model then adjusts the weights and biases to **minimize** the error. 
@@ -440,7 +440,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 ![w:500px](assets/gen_ai_vs_dis_ai.png)
 
->  Note the difference in the input and output of a generative and discrimnative neural network. Source : By Lwneal - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=153580528
+>  Note the difference in the input and output of a generative and discriminative neural network. Source : By Lwneal - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=153580528
 
 </div>
 
@@ -453,7 +453,7 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
   - "The Cat Ate the Rat" and "The Rat Ate the Cat" - same words with opposite meanings.
 
-- Key step involved -> convert text into a numerical representation called **embedding** where similiar words have similiar **embeddings**. 
+- Key step involved -> convert text into a numerical representation called **embedding** where similar words have similar **embeddings**. 
 
 - After this we do **"positional encoding"** - where numerical representations are generated for the location of the word w.r.t others. 
 
@@ -516,6 +516,50 @@ Feature selection is widely practiced to improve model ***"performance"***. Howe
 
 ---
 
+# Resources needed for AI learning
+
+- GPT v4.0 was trained on 13 trillion **tokens**. 
+
+- This roughly translates to about 10 trillion words. 
+
+- The model is believed to have 1.76 trillion **parameters**
+
+- It took 25,000 NVIDIA A100 GPUs to train the model over 100 days. 
+
+- The overall training cost is estimated to be ~ **$ 100 million**
+
+- Power consumed was **50 GWh**
+
+    > A human body requires about 80 watts per day -> over an entire lifetime of 80 years total power consumed by a human is 0.06792 GWh !
+
+
+---
+
+<!-- _class: three-images -->
+
 # Summary & Take Home
 
-- 
+<div>
+
+![w:400](assets/chat_gpt.png)
+
+ChatGPT
+
+</div>
+
+<div>
+
+![w:400](assets/gemini.png)
+
+Gemini
+
+</div>
+
+<div>
+
+![w:400](assets/claude.png)
+
+Claude
+
+</div>
+

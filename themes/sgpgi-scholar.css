@@ -361,6 +361,59 @@ section.image-focus blockquote p {
   color: inherit;
 }
 
+/* ---------- Three-images layout ----------
+ * Three equal columns for side-by-side images.
+ * First H1 spans full width as the title.
+ * Usage: <!-- _class: three-images -->
+ *
+ *   ![w:300](a.png)
+ *   ![w:300](b.png)
+ *   ![w:300](c.png)
+ */
+section.three-images {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  padding: 20px 30px;
+}
+section.three-images > h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+section.three-images > div {
+  width: 100%;
+  text-align: center;
+}
+section.three-images img {
+  width: 100%;
+  max-width: 360px;
+  max-height: 420px;
+  object-fit: contain;
+}
+section.three-images p {
+  /* caption under each image, if any */
+  color: var(--muted);
+  font-size: 0.55em;
+  text-align: center;
+  margin: 0.4em 0 0;
+}
+section.three-images blockquote {
+  /* optional attribution spanning all columns */
+  grid-column: 1 / -1;
+  border: none;
+  background: none;
+  margin: 0.5em auto 0;
+  padding: 0;
+  font-size: 0.45em;
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  max-width: 90%;
+}
+
 /* ---------- Quote / highlight layout ----------
  * Large centered statement for key takeaways.
  * Usage: <!-- _class: quote -->
