@@ -267,13 +267,24 @@ footer: 'Challenges of implementing AI in healthcare & some solutions (2026) · 
 
 <!-- _class: spotlight -->
 
-# Why Do You Need AI in Healthcare ?
+# Overcoming these Challenges
 
 ---
 
+<!-- _class: image-focus -->
+
+# Regulation is the first step 
+
+![width=900px](assets/eu_method.svg)
+
+> Source: https://health.ec.europa.eu/ehealth-digital-health-and-care/artificial-intelligence-healthcare_en#aicareeu-deployment-of-ai-in-healthcare
+
+---
+
+
 <!-- _class: split-box -->
 
-# Classification of Needs
+# Why is AI needed "here" ?
 
 <div>
 
@@ -291,4 +302,70 @@ footer: 'Challenges of implementing AI in healthcare & some solutions (2026) · 
 
 </div>
 
+
 ---
+
+<!-- _class: split-box -->
+
+# Evaluation framework for Healthcare AI
+
+<div>
+
+![width=600px](assets/framework.png)
+
+ > Source: Wells, B.J., Nguyen, H.M., McWilliams, A. et al. A practical framework for appropriate implementation and review of artificial intelligence (FAIR-AI) in healthcare. npj Digit. Med. 8, 514 (2025). https://doi.org/10.1038/s41746-025-01900-y
+
+</div>
+
+<div class= 'box'>
+
+- FAIR-AI is a recently proposed framework with a two step triage process to filter high risk implementation 
+
+- Risk type defined w.r.t to the potential harms to patient, caregivers and the hospital environment of deployment
+
+- Also covers risks related perpetuation of social inequity, care in vulerable populations, handling of sensitive data & explainability.
+
+
+---
+
+<!-- _class: image-focus -->
+
+# Best Practices for Implementation
+
+
+![width=900px](assets/best_practices.svg)
+
+> Source : Wells, B.J., Nguyen, H.M., McWilliams, A. et al. A practical framework for appropriate implementation and review of artificial intelligence (FAIR-AI) in healthcare. npj Digit. Med. 8, 514 (2025). https://doi.org/10.1038/s41746-025-01900-y
+
+---
+
+<!-- _class: image-focus -->
+
+# Our Journey in AI implementation
+
+![width=900px](assets/our_journey.svg)
+
+--- 
+
+<!--   -->
+
+# Conclusion
+
+- Implementation of AI in Healthcare should not be viewed as "solely" as a technological challenge - there are social, economic and most importantly human related factors. 
+
+- The potential for harm is very real. Weather any of this can actually save more lives is still "unproven"
+
+- Healthcare workers need to stop being passive observers and become active participants in evaluation and development. 
+
+- Modern open source software and AI models make this achievable. 
+
+
+---
+
+<!-- _paginate: false -->
+<!-- _footer: '' -->
+<!-- _class: spotlight -->
+
+# Thank You
+
+

@@ -563,3 +563,10 @@ Claude
 
 </div>
 
+---
+
+<!-- _paginate: false -->
+<!-- _footer: '' -->
+<!-- _class: spotlight -->
+
+# Thank You
