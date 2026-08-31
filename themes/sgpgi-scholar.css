@@ -452,6 +452,52 @@ section.quote p {
   margin-top: 1em;
 }
 
+/* ---------- Spotlight / big statement ----------
+ * A few words or short sentences centered on the slide at a large
+ * font size. Plain white background — no quotation marks, no soft
+ * tint (use `quote` for that). The first H1 is the statement; an
+ * optional H2/P below acts as a small subtitle or attribution.
+ * Usage: <!-- _class: spotlight -->
+ *
+ *   # A short, punchy statement
+ *   Optional subtitle line.
+ */
+section.spotlight {
+  background: var(--primary);
+  color: #fff;
+  justify-content: center !important;
+  align-items: center;
+  text-align: center;
+  padding: 80px 120px;
+}
+section.spotlight h1 {
+  font-size: 2.6em;
+  font-weight: 700;
+  border-bottom: none;
+  color: #fff;
+  line-height: 1.15;
+  margin: 0;
+  max-width: 16em;
+}
+section.spotlight h1::after { display: none; }
+section.spotlight h2 {
+  font-size: 1em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.8em;
+  max-width: 24em;
+}
+section.spotlight p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7em;
+  margin-top: 1em;
+  max-width: 30em;
+}
+section.spotlight footer {
+  color: rgba(255, 255, 255, 0.5);
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
 /* ============================================================
  * Attribution & References
  * ============================================================ */

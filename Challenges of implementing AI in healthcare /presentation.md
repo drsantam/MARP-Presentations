@@ -262,3 +262,33 @@ footer: 'Challenges of implementing AI in healthcare & some solutions (2026) · 
 > Hieararchy of challenges involved in AI system development in Healthcare
 
 </div>
+
+---
+
+<!-- _class: spotlight -->
+
+# Why Do You Need AI in Healthcare ?
+
+---
+
+<!-- _class: split-box -->
+
+# Classification of Needs
+
+<div>
+
+![width=600px](assets/needs_classification.svg)
+
+</div>
+
+<div class='box'>
+
+- Unlike the tech sector, need for AI in healthcare should never be predicated solely on better **bottomlines**. 
+
+- The type of AI tooling matters - most operational needs requiring automation **DO NOT** require large language models. 
+
+- In reality for most of the delivery areas - AI can only increase **efficiency** at best. 
+
+</div>
+
+---
