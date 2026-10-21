@@ -28,7 +28,7 @@ footer: 'Real World Evidence (2026) · CC BY-NC 4.0'
 
 ## What is the difference between efficacy and effectiveness ?
 
-
+- Archie Cochrane proposed 
 
 ---
 
