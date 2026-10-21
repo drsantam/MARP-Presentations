@@ -1,3 +1,5 @@
 .DS_Store/
 .devin/
 .venv/
+_site/
+node_modules/
