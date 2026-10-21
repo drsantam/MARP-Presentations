@@ -28,7 +28,13 @@ footer: 'Real World Evidence (2026) · CC BY-NC 4.0'
 
 ## What is the difference between efficacy and effectiveness ?
 
-- Archie Cochrane proposed 
+- **Efficacy** : The extent to which an intervention does more **good** than **harm** under ideal circumstances.
+- **Effectiveness** : The extent to which an intervention does more **good** than **harm** under usual circumstances of practice.
+- When does Efficacy **not** translate into effectiveneness:
+  - Diagnostic inaccuracy : Not picking the correct patient for treatment
+  - Provider compliace : Lack of adherence to guidelines
+  - Patient incompliance : Psychological / Social / Economic circumstances
+  - Coverage of health services  
 
 ---
 
