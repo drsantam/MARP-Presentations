@@ -92,17 +92,28 @@ section code { color: var(--primary-dark); }
 section pre code { color: #1f2a37; }
 
 /* ---------- Tables ---------- */
-section table { border-collapse: collapse; margin: 1em 0; }
-section th, section td { border: 1px solid #d6dee6; padding: 0.4em 0.8em; }
+section table {
+  display: table;
+  border-collapse: collapse;
+  margin: 1em auto;
+  max-height: 100%;
+  overflow: hidden;
+  table-layout: fixed;
+  width: 100%;
+  align-self: center;
+}
+section th, section td { border: 1px solid #d6dee6; padding: 0.4em 0.8em; overflow-wrap: break-word; word-break: break-word; }
 section th { background: var(--primary); color: #fff; }
 section tr:nth-child(even) td { background: var(--bg-soft); }
+section td, section th { vertical-align: top; }
 
 /* Compact table — use with <!-- _class: compact-table --> */
 section.compact-table table {
   width: 100%;
   font-size: 0.7em;
-  margin: 0.5em 0;
+  margin: 0.5em auto;
   table-layout: auto;
+  align-self: center;
 }
 section.compact-table th,
 section.compact-table td {
@@ -110,6 +121,35 @@ section.compact-table td {
   word-break: break-word;
   overflow-wrap: break-word;
 }
+section.compact-table blockquote {
+  font-size: 0.55em;
+  padding: 0.5em 1em;
+  margin: 0.5em 0 0;
+}
+
+/* Two-way comparison table — use with <!-- _class: two-way-comparison-table -->
+   Fixed layout: narrow label column, remaining columns split the leftover width equally. */
+section.two-way-comparison-table table {
+  display: table;
+  width: 100%;
+  font-size: 0.7em;
+  margin: 0.5em auto;
+  table-layout: fixed;
+  align-self: center;
+}
+section.two-way-comparison-table th,
+section.two-way-comparison-table td {
+  padding: 0.3em 0.6em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+/* Explicit per-column widths so fixed layout never falls back to content sizing */
+section.two-way-comparison-table th:nth-child(1),
+section.two-way-comparison-table td:nth-child(1) { width: 22%; }
+section.two-way-comparison-table th:nth-child(2),
+section.two-way-comparison-table td:nth-child(2) { width: 39%; }
+section.two-way-comparison-table th:nth-child(3),
+section.two-way-comparison-table td:nth-child(3) { width: 39%; }
 
 /* ---------- Footer ---------- */
 footer {
@@ -271,9 +311,11 @@ section.two-column > h2 {
 section.split-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   gap: 0.5em 1em;
   align-items: start;
   align-content: start;
+  overflow: hidden;
 }
 section.split-box > h1 {
   grid-column: 1 / -1;
@@ -281,7 +323,8 @@ section.split-box > h1 {
 section.split-box .box {
   padding: 1em 1.2em;
   border-radius: 6px;
-  font-size: 0.85em;
+  font-size: 0.75em;
+  line-height: 1.4;
 }
 section.split-box .box ul,
 section.split-box .box ol {
