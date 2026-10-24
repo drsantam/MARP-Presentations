@@ -6,15 +6,24 @@ title: Real World Evidence
 paginate: true
 footer: 'Real World Evidence (2026) · CC BY-NC 4.0'
 ---
+<style>
+/* Title page: CHAVI hero banner — full aspect ratio, scaled to leave room for the title block */
+section.titlepage img.hero-banner {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+</style>
+
 <!-- _class: titlepage -->
 
 <!-- _paginate: false -->
 
 <!-- _footer: '' -->
 
-<div class="topleft">
-
-</div>
+<img class="hero-banner" src="assets/chavi.png" alt="CHAVI">
 
 # Real-World Evidence
 
